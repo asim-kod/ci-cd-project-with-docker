@@ -1,0 +1,23 @@
+---
+- hosts: ansible
+  vars:
+    docker_user: "{{ lookup('env', 'DOCKER_USER') }}"
+    docker_password: "{{ lookup('env', 'DOCKER_PASSWORD') }}"
+
+  tasks:
+  - name: create docker image
+    command: docker build -t webapp:latest .
+    args:
+      chdir: /opt/webapp_deployment
+
+  - name: log into dockerhub securely
+    command: docker login -u "{{ docker_user }}" -p "{{ docker_password }}"
+
+  - name: tagging to push image onto dockerhub
+    command: docker tag webapp:latest "{{ docker_user }}/webapp:latest"
+
+  - name: push docker image
+    command: docker push "{{ docker_user }}/webapp:latest"
+
+  - name: log out from dockerhub
+    command: docker logout

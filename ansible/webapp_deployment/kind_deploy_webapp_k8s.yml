@@ -1,0 +1,21 @@
+---
+- hosts: kubernetes
+
+  tasks:
+  - name: deploy webapp on kubernetes
+    command: kubectl apply -f /opt/webapp_deployment/kind_webapp_deployment.yml
+
+  - name: update deployment with new pods if image updated in docker hub
+    command: kubectl rollout restart deployment.apps/webapp-deploy
+
+  - name: Wait for 10 seconds for pods to become ready
+    ansible.builtin.pause:
+      seconds: 10
+
+  - name: Kill old port-forward process if exists safely
+    shell: "fuser -k 8085/tcp || true"
+
+  - name: Start fresh port forwarding in background safely (with auto-restart loop)
+    shell: "nohup sh -c 'while true; do kubectl port-forward --address 0.0.0.0 service/webapp-svc 8085:8080; sleep 1; done' > /home/eksadmin/pf.log 2>&1 &"
+    async: 15
+    poll: 0

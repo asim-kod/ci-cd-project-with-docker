@@ -126,7 +126,7 @@ Examples include:
 
 ## 🏗️ CICD In Action
 
-<table align="center">
+<table>
   <tr>
     <td align="center">
       <img src="./images/Jobs.png" width="400px"/><br>

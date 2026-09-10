@@ -129,7 +129,44 @@ Examples include:
 - `nohup` — keeping background processes running independently
 - `fuser` — identifying and releasing processes occupying required sockets/ports
 
-## 🏗️ CICD In Action
+## 🏗️ CI/CD in Action
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="./images/Jobs.png" width="400px"/><br>
+      <b>All Jenkins Jobs</b>
+    </td>
+    <td align="center">
+      <img src="./images/CI_Job.png" width="400px"/><br>
+      <b>CI Job</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="./images/CD_Job.png" width="400px"/><br>
+      <b>CD Job</b>
+    </td>
+    <td align="center">
+      <img src="./images/DockerHub_Image.png" width="400px"/><br>
+      <b>DockerHub Image</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="./images/App_On_K8s.png" width="400px"/><br>
+      <b>Application on Kubernetes</b>
+    </td>
+    <td align="center">
+      <img src="./images/Webapp.png" width="400px"/><br>
+      <b>Web Application</b>
+    </td>
+  </tr>
+</table>
+
+### 📌 Go to Main CI/CD Project - ([Repo](https://github.com/asim-kod/ci-cd-pipeline-project))
 
 ## 🎯 Key Highlights
 

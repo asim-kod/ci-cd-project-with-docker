@@ -2,6 +2,11 @@
 
 > A fully automated local CI/CD pipeline for a Java application using Jenkins, Maven, Ansible, Docker, DockerHub, and Kubernetes (KIND).
 
+## 🏗️ Architecture Flow  
+<p>
+   <img src="./images/Pipeline-Flow.png" width="850px" />
+</p>
+
 ## 📌 Project Overview
 
 This project demonstrates an end-to-end **CI/CD pipeline for a Java-based application**, recreated locally using **Docker Compose**.

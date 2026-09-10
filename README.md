@@ -131,41 +131,6 @@ Examples include:
 
 ## 🏗️ CICD In Action
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./images/Jobs.png" width="400px"/><br>
-      <b>All Jenkins Jobs</b>
-    </td>
-    <td align="center">
-      <img src="./images/CI_Job.png" width="400px"/><br>
-      <b>CI Job</b>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <img src="./images/CD_Job.png" width="400px"/><br>
-      <b>CD Job</b>
-    </td>
-    <td align="center">
-      <img src="./images/DockerHub_Image.png" width="400px"/><br>
-      <b>DockerHub Image</b>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <img src="./images/App_On_K8s.png" width="400px"/><br>
-      <b>Application on Kubernetes</b>
-    </td>
-    <td align="center">
-      <img src="./images/Webapp.png" width="400px"/><br>
-      <b>Web Application</b>
-    </td>
-  </tr>
-</table>
-
 ## 🎯 Key Highlights
 
 - Fully automated local CI/CD pipeline
